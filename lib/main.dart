@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:task_app/screens/tabs_screen.dart';
-import 'package:task_app/screens/pending_screen.dart';
 import 'package:task_app/services/app_router.dart';
 import 'package:task_app/services/app_theme.dart';
 
