@@ -24,7 +24,7 @@ class TasksState extends Equatable {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'allTasks': pendingTask.map((x) => x.toMap()).toList(),
+      'pendingTask': pendingTask.map((x) => x.toMap()).toList(),
       'completedTask': completedTask.map((x) => x.toMap()).toList(),
       'favoriteTask': favoriteTask.map((x) => x.toMap()).toList(),
       'removedTask': removedTask.map((x) => x.toMap()).toList(),

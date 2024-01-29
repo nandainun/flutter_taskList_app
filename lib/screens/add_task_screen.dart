@@ -10,6 +10,7 @@ class AddTaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController titleController = TextEditingController();
+    TextEditingController descController = TextEditingController();
     var uuid = const Uuid();
 
     return Container(
@@ -31,6 +32,19 @@ class AddTaskScreen extends StatelessWidget {
               border: OutlineInputBorder(),
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
+          TextField(
+            autofocus: false,
+            controller: descController,
+            minLines: 3,
+            maxLines: 5,
+            decoration: const InputDecoration(
+              label: Text('Description'),
+              border: OutlineInputBorder(),
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -42,6 +56,7 @@ class AddTaskScreen extends StatelessWidget {
                 onPressed: () {
                   var task = Task(
                     title: titleController.text,
+                    description: descController.text,
                     id: uuid.v1(),
                   );
 

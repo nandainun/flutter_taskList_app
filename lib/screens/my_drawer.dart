@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/screens/recycle_bin.dart';
 import 'package:task_app/screens/tabs_screen.dart';
-import 'package:task_app/screens/pending_screen.dart';
 
 import '../blocs/bloc_exports.dart';
 

@@ -8,8 +8,10 @@ enum AppTheme {
 class AppThemes {
   static final appThemeData = {
     AppTheme.darkTheme: ThemeData(
+      primarySwatch: Colors.grey,
       primaryColor: Colors.black,
       brightness: Brightness.dark,
+      backgroundColor: const Color(0xFF212121),
       dividerColor: Colors.black54,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Colors.white,
@@ -24,16 +26,16 @@ class AppThemes {
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: Colors.grey, unselectedItemColor: Colors.white),
-      colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.grey)
-          .copyWith(background: const Color(0xFF212121)),
     ),
 
     //
     //
 
     AppTheme.lightTheme: ThemeData(
+      primarySwatch: Colors.grey,
       primaryColor: Colors.white,
       brightness: Brightness.light,
+      backgroundColor: const Color(0xFFE5E5E5),
       dividerColor: const Color(0xff757575),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Colors.black,
@@ -51,8 +53,6 @@ class AppThemes {
           backgroundColor: Colors.grey,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.white),
-      colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.grey)
-          .copyWith(background: const Color(0xFFE5E5E5)),
     ),
   };
 }

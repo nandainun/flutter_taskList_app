@@ -9,17 +9,27 @@ import 'blocs/bloc_exports.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ignore: non_constant_identifier_names
-  final Storage = await HydratedStorage.build(
+  HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: await getApplicationDocumentsDirectory(),
   );
 
-  HydratedBlocOverrides.runZoned(
-    () => runApp(MyApp(
+  runApp(
+    MyApp(
       appRouter: AppRouter(),
-    )),
-    storage: Storage,
+    ),
   );
+
+  // // ignore: non_constant_identifier_names
+  // final Storage = await HydratedStorage.build(
+  //   storageDirectory: await getApplicationDocumentsDirectory(),
+  // );
+
+  // HydratedBlocOverrides.runZoned(
+  //   () => runApp(MyApp(
+  //     appRouter: AppRouter(),
+  //   )),
+  //   storage: Storage,
+  // );
 }
 
 class MyApp extends StatelessWidget {
